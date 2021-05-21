@@ -17,6 +17,7 @@
         console.log(artArray[i]);
       }
     }
+    
 
     writeAscii(artArray);
 
