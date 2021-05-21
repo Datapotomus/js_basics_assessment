@@ -9,7 +9,14 @@
 
 (function() {
 
-    //your code here
+  console.log(typeof artArray);
+    for (let i=0; i < artArray.length; i++){
+      
+      if (artArray[i] === 'lol'.repeat(40)){
+        artArray.splice(i, 3)
+        console.log(artArray[i]);
+      }
+    }
 
     writeAscii(artArray);
 
