@@ -24,5 +24,27 @@
      */
 
     //your code here
+    let fizz = "Fizz";
+    let buzz = "Buzz";
+    let stringOuput = "";
+
+
+    function fizzbuzz (maxValue){
+      for (let i = 1; i <= maxValue; i++){
+        if ((i % 2 !== 0) && (i % 3 !== 0)){
+          stringOuput += `${i}, `;
+        } else if ((i % 2 === 0) && (i % 3 === 0)){
+          stringOuput += `${fizz}${buzz}, `;
+        }else if (i % 2 === 0){
+          stringOuput += `${fizz}, `;
+        }else if (i % 3 === 0){
+          stringOuput += `${buzz}, `;
+        };
+      };
+
+      console.log(stringOuput);
+    };
+
+    fizzbuzz(12);
 
 })();
