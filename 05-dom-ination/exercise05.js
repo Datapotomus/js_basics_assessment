@@ -19,7 +19,18 @@
  */
 
 (function () {
+    let heading = document.querySelector("h1");
 
-    //your code here
+    // Function #1 changing heading from black to red.
+    heading.addEventListener("click", function() {
+        console.log("heading clicked");
+        
+        if(heading.style.color !== "red"){
+          heading.style.color="red";
+        } else if (heading.style.color === "red"){
+          heading.style.color="black";
+        }
+      });
+
 
 })();
