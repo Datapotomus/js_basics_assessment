@@ -13,7 +13,18 @@
  *
  */
 
-//your code here
+    let heading = document.querySelector("#title");
+
+    // function setGoodbyeWorld(){
+    //     heading.innerHTML = "Goodbye World";
+    // };
+
+    // setTimeout(setGoodbyeWorld, 3000);
+    
+    setTimeout(function () {heading.innerHTML = "Goodbye World"}, 3000);
+    
+
+    console.log(heading);
 
 })();
     
