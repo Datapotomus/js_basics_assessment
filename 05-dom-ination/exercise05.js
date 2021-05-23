@@ -22,6 +22,10 @@
     let heading = document.querySelector("h1");
     let titlelinks = document.querySelectorAll(".title");
     let pTexts = document.querySelectorAll("p");
+    let posts = document.querySelectorAll(".post");
+    let rightImgs = document.querySelectorAll("aside > p");
+
+
 
 
     // Function #1 changing heading from black to red.
@@ -45,8 +49,22 @@
       for (let i = 0; i < pTexts.length; i++){
         pTexts[i].innerHTML = pTexts[i].innerHTML.replace("Bacon","LASER VISION");
   
+      };
+
+      posts[(posts.length - 1)].remove();
+      posts[(posts.length - 2)].remove(); 
+      // I don't think line 147 on the html is supposed to have a class of post,
+      // because I thought it was comments.
+      
+      for (let i = 0; i < rightImgs.length; i++){
+        rightImgs[i].remove();
       }
 
+
+
+
+      console.log(rightImgs);
+      console.log(posts);
 
 
 })();
