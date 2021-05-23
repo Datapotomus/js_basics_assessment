@@ -21,6 +21,7 @@
 (function () {
     let heading = document.querySelector("h1");
     let titlelinks = document.querySelectorAll(".title");
+    let pTexts = document.querySelectorAll("p");
 
 
     // Function #1 changing heading from black to red.
@@ -33,17 +34,19 @@
           heading.style.color="black";
         }
       });
+
       for (let i = 0; i < titlelinks.length; i++){
         if (i % 2 === 0){
           console.log(titlelinks[i]);
           titlelinks[i].classList.add("hide");
         }
+      };
+
+      for (let i = 0; i < pTexts.length; i++){
+        pTexts[i].innerHTML = pTexts[i].innerHTML.replace("Bacon","LASER VISION");
+  
       }
 
-      
-
-
-      console.log(titlelinks);
 
 
 })();
