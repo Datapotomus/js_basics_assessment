@@ -24,12 +24,36 @@
    * this function adds an image to the page
    * @param {String} name an image filename
    */
+  let pictures = ["cats.jpg", "hugger.jpg", "internet.jpg", "jackson.jpg", "washington.jpg"];
   function addImage(name) {
     var img = document.createElement('img');
     img.src = name;
     document.getElementById('image-box').appendChild(img);
   }
 
-  //your code here
+  function getRandomIndex(min, max){
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  };
+
+  // Still need some cleanup. With logging, but wanted to leave them in.
+
+  let currentPicture = 0;
+  let remainingPictures = pictures.slice();
+  for (let i = 0; i < pictures.length; i++){
+    let minPictures = 0;
+    let maxPictures = remainingPictures.length;
+    let currentPicture = getRandomIndex(minPictures, maxPictures);
+    console.log(currentPicture);
+    let selectedPicture = remainingPictures.splice(currentPicture, 1);
+    console.log(`selected picture: ${selectedPicture}`)
+    console.log(`Remaining Pictures: ${remainingPictures}`);
+    setTimeout(function () {addImage(selectedPicture)}, (2500 + (i * 2500)));
+  }
+
+  // setTimeout(function () {addImage("internet.jpg")}, 3000);
+  // setTimeout(function () {addImage("cats.jpg")}, 3000);
+  // console.log("placeholder");
 
 })();
