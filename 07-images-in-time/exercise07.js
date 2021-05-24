@@ -27,11 +27,11 @@
   let pictures = ["cats.jpg", "hugger.jpg", "internet.jpg", "jackson.jpg", "washington.jpg"];
   function addImage(name) {
     var img = document.createElement('img');
-    let pElement = document.createElement('P');
+    let breakTag = document.createElement('br');
     img.src = name;
     let imgBox = document.getElementById('image-box');
     imgBox.appendChild(img);
-    imgBox.appendChild(pElement);
+    imgBox.appendChild(breakTag);
   }
 
   function getRandomIndex(min, max){
